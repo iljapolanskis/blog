@@ -29,8 +29,8 @@ class PostFactory extends Factory
             "content" => collect($this->faker->paragraphs(8))
                 ->map(fn($item) => "<p>{$item}</p>")
                 ->implode(""),
-            "image_url" => $this->faker->imageUrl(640, 480),
-            "published_at" => $this->faker->dateTimeBetween('-2 years', 'now'),
+            "image_url" => "https://picsum.photos/seed/{$this->faker->unique()->randomNumber()}/640/480",
+            "published_at" => $this->faker->dateTimeBetween("-2 years", "now"),
         ];
     }
 }

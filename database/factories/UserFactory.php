@@ -18,13 +18,15 @@ class UserFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->name(),
-            'username' => $this->faker->unique()->userName(),
-            'email' => $this->faker->unique()->safeEmail(),
-            'email_verified_at' => now(),
-            'password' => bcrypt('password'),
-            'avatar_url' => $this->faker->imageUrl(80, 80),
-            'remember_token' => Str::random(10),
+            "name" => $this->faker->name(),
+            "username" => $this->faker->unique()->userName(),
+            "email" => $this->faker->unique()->safeEmail(),
+            "email_verified_at" => now(),
+            "password" => bcrypt("password"),
+            "avatar_url" =>
+                "https://i.pravatar.cc/60?u=" .
+                $this->faker->unique()->userName(),
+            "remember_token" => Str::random(10),
         ];
     }
 
@@ -37,7 +39,7 @@ class UserFactory extends Factory
     {
         return $this->state(function (array $attributes) {
             return [
-                'email_verified_at' => null,
+                "email_verified_at" => null,
             ];
         });
     }
