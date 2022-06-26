@@ -1,8 +1,10 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Posts') }}
-        </h2>
+        <a href="{{ route('posts') }}">
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+                {{ __('Posts') }}
+            </h2>
+        </a>
     </x-slot>
 
     <div class="py-12">
@@ -15,7 +17,7 @@
                         @if ($posts->isNotEmpty())
                             <x-posts-grid :posts="$posts"/>
                             {{ $posts->links() }}
-                            <x-pagination />
+                            <x-pagination/>
                         @else
                             <p class="text-center">No posts yet. Please check back later.</p>
                         @endif

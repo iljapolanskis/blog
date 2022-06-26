@@ -1,6 +1,7 @@
 @props(['post'])
 
-<article class="transition-colors duration-300 hover:bg-gray-100 border border-black border-opacity-0 hover:border-opacity-5 rounded-xl">
+<article
+    class="transition-colors duration-300 hover:bg-gray-100 border border-black border-opacity-0 hover:border-opacity-5 rounded-xl">
     <div class="py-6 px-5 lg:flex">
         <div class="flex-1 lg:mr-8">
             <img src="{{ $post->image_url }}" alt="Blog Post illustration" class="rounded-xl">
@@ -9,12 +10,13 @@
         <div class="flex-1 flex flex-col justify-between">
             <header class="mt-8 lg:mt-0">
                 <div class="space-x-2">
-                   <x-category-label :category="$post->category" />
+                    <x-category-label :category="$post->category"/>
                 </div>
 
                 <div class="mt-4">
-                    <h1 class="text-3xl">{{ $post->title }}</h1>
-
+                    <a href="{{ route("post", $post->slug) }}">
+                        <h1 class="text-3xl">{{ $post->title }}</h1>
+                    </a>
                     <span class="mt-2 block text-gray-400 text-xs">
                             Published <time>{{ $post->created_at->diffForHumans() }}</time>
                         </span>
@@ -27,11 +29,11 @@
 
             <footer class="flex justify-between items-center mt-8">
                 <div class="flex items-center text-sm">
-                    <x-author-label :author="$post->author" />
+                    <x-author-label :author="$post->author"/>
                 </div>
 
-                <div class="hidden lg:block">
-                    <a href="/posts/{{ $post->slug }}"
+                <div class="hidden lg:block min-w-fit">
+                    <a href="{{ route("post", $post->slug) }}"
                        class="transition-colors duration-300 text-xs font-semibold bg-gray-200 hover:bg-gray-300 rounded-full py-2 px-8"
                     >Read More</a>
                 </div>
