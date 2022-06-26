@@ -3,6 +3,7 @@
         Latest <span id="categories-swap" class="text-blue-500">Magento 2</span> Related Posts
     </h1>
 
+
     <div class="space-y-2 lg:space-y-0 lg:space-x-4 mt-6">
         <!--  Category -->
         <x-category-dropdown/>

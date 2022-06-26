@@ -22,3 +22,7 @@
         </x-slot>
     </x-posts-dropdown>
 </div>
+
+<script>
+    const categories_list = {{ Js::from($categories->map(fn($category) => $category->name)) }};
+</script>

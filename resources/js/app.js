@@ -4,9 +4,10 @@ import Alpine from 'alpinejs';
 
 import SwappableHeading from "./swappable-heading";
 
-new SwappableHeading(document.getElementById('categories-swap'),
-    ['PHP', 'ViM', 'Laravel', 'Magento 2']).swap();
-
+// categories_list comes from category-dropdown.blade.php
+if (typeof categories_list !== 'undefined') {
+    new SwappableHeading(document.getElementById('categories-swap'), categories_list).swap();
+}
 
 window.Alpine = Alpine;
 
