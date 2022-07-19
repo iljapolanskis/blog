@@ -6,9 +6,6 @@
 
     <title>Laravel</title>
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
     <!-- Styles -->
     <style>
         /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -27,11 +24,6 @@
 
         [hidden] {
             display: none
-        }
-
-        html {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-            line-height: 1.5
         }
 
         *, :after, :before {
@@ -390,12 +382,6 @@
                 color: #6b7280;
                 color: rgba(107, 114, 128, var(--tw-text-opacity))
             }
-        }
-    </style>
-
-    <style>
-        body {
-            font-family: 'Nunito', sans-serif;
         }
     </style>
 </head>
