@@ -383,6 +383,10 @@
                 color: rgba(107, 114, 128, var(--tw-text-opacity))
             }
         }
+
+        body {
+            font-family: 'JetBrains Mono Website', 'JetBrains Mono', sans-serif;
+        }
     </style>
 </head>
 <body class="antialiased">
