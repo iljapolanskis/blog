@@ -434,7 +434,8 @@
 
                     <div class="ml-12">
                         <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                            Here is my first experience with Laravel. This blog is a place to share my knowledge and experience on Magento 2 framework, PHP, Laravel, and more.
+                            Here is my first experience with Laravel. This blog is a place to share my knowledge and
+                            experience on Magento 2 framework, PHP, Laravel, and more.
                         </div>
                     </div>
                 </div>
