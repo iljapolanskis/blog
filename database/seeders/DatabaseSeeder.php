@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Apartment;
 use App\Models\Category;
 use App\Models\Comment;
 use App\Models\Post;
@@ -78,5 +79,7 @@ class DatabaseSeeder extends Seeder
         Comment::factory(2)->create(['user_id' => $user2->id, 'post_id' => $post10->id]);
         Comment::factory(1)->create(['user_id' => $user3->id, 'post_id' => $post10->id]);
 
+        // Rental Part
+        Apartment::factory(40)->create();
     }
 }
