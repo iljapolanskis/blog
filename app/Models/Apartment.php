@@ -11,5 +11,15 @@ class Apartment extends Model
 
     protected $guarded = [];
 
+    public function pricePerSquare(): string
+    {
+        $value = number_format((float)($this->price / $this->area), 2, '.', '');
+        return "$value €/m";
+    }
+
+    public function listOfImages(): array
+    {
+        return explode(', ', $this->images);
+    }
 
 }
