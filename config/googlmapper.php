@@ -40,7 +40,7 @@ return [
     | The region Google API should use required in ISO 3166-1 code format.
     |
     */
-    'region' => 'GB',
+    'region' => 'MT',
 
     /*
     |--------------------------------------------------------------------------
@@ -60,7 +60,7 @@ return [
     | Perform the loading and rendering of Googlmapper map asynchronously.
     |
     */
-    'async' => false,
+    'async' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -71,7 +71,7 @@ return [
     | Googlmapper displayed map.
     |
     */
-    'marker' => true,
+    'marker' => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -103,7 +103,7 @@ return [
     | The default zoom level Googlmapper should use.
     |
     */
-    'zoom' => 8,
+    'zoom' => 12,
 
     /*
     |--------------------------------------------------------------------------
