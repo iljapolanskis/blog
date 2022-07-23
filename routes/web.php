@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ApartmentsController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,6 +21,9 @@ Route::get('/', function () {
 
 Route::get('posts', [PostController::class, 'index'])->name('posts');
 Route::get('posts/{post:slug}', [PostController::class, 'show'])->name('post');
+
+Route::get('apartments', [ApartmentsController::class, 'index'])->name('apartments');
+Route::get('apartments/{apartment}', [ApartmentsController::class, 'show'])->name('apartment');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

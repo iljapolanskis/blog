@@ -185,6 +185,7 @@ return [
         /*
          * Package Service Providers...
          */
+        Cornford\Googlmapper\MapperServiceProvider::class,
 
         /*
          * Application Service Providers...
